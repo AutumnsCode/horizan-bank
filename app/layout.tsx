@@ -8,17 +8,17 @@ const inter = Inter({
 });
 
 const ibmPlexSerif = IBM_Plex_Serif({
-  subsets: ['latin'],
-  variable: '--font-ibm-plex-serif',
-  weight: ['400', '700']
-})
+	subsets: ['latin'],
+	variable: '--font-ibm-plex-serif',
+	weight: ['400', '700'],
+});
 
 export const metadata: Metadata = {
 	title: 'Horizon',
-  description: 'Uorizan is a modern banking platform for everyone.',
-  icons: {
-    icon: '/icons/logo.svg'
-  }
+	description: 'Horizan is a modern banking platform for everyone.',
+	icons: {
+		icon: '/icons/logo.svg',
+	},
 };
 
 export default function RootLayout({
@@ -28,7 +28,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${inter.variable} ${ibmPlexSerif.variable} antialiased`}>{children}</body>
+			<body
+				className={`${inter.variable} ${ibmPlexSerif.variable} antialiased`}
+			>
+				{children}
+			</body>
 		</html>
 	);
 }

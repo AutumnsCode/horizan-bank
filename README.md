@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bank App
 
-## Getting Started
+This project is a tutorial from [YouTube](https://www.youtube.com/watch?v=PuOVqP_cjkE).
 
-First, run the development server:
+## What I learned?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Using CountUp
+- Using ChartJs:
+I have use it in the past, but it was the first time that i use it in a React Project.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### React CountUp
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Install: `npm i react-countup`
+2. Import `CountUp` into the files(**Important**: Can not be placed inside a paragraph):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```javascript
+   import CountUp from 'react-countup';
 
-## Learn More
+3. Follow the [Instruction](https://www.npmjs.com/package/react-countup)
 
-To learn more about Next.js, take a look at the following resources:
+### ChartJS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. install: `npm i react-chartjs-2 chart.js`
+2. Set up the project:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```typescript
+import { Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+// Registriere die benötigten Elemente
+ChartJS.register(ArcElement, Tooltip, Legend);
