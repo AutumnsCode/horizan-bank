@@ -23,9 +23,11 @@ I have use it in the past, but it was the first time that i use it in a React Pr
 1. install: `npm i react-chartjs-2 chart.js`
 2. Set up the project:
 
-```typescript
-import { Doughnut } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+   ```javascript
+   import { Doughnut } from 'react-chartjs-2';
+   import { Chart as ChartJS, ArcElement, Tooltip,   Legend } from 'chart.js';
 
-// Registriere die benötigten Elemente
-ChartJS.register(ArcElement, Tooltip, Legend);
+3. Register the project: (copy from the video not the doc)
+
+   ```javascript
+   ChartJS.register(ArcElement, Tooltip, Legend);
